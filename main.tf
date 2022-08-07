@@ -23,13 +23,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  region     = "us-east-1"
-  access_key = "AKIAUUMP4EM2LN7BSBPX"
-  secret_key = "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"
-
-}
-
 #for_each loop works for map and set only
 #count is index based whereas for_each loop works on key or value given in the set or list
 #map stores in the form of key value pair map{"key="value}
@@ -56,20 +49,4 @@ resource "aws_instance" "My_another_instance" {
   }
 }
 
-# resource "aws_s3_bucket" "b" {
-#   bucket = "my-tf-test-bucket"
 
-#   tags = {
-#     Name        = "My bucket"
-#     Environment = "Dev"
-#   }
-#}
-
-#S3
-# terraform {
-#   backend "s3" {
-#     bucket = "mybucket"
-#     key    = "path/to/my/key"
-#     region = "us-east-1"
-#   }
-# }
